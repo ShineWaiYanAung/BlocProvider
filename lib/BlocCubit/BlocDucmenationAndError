@@ -1,0 +1,43 @@
+1//
+Cubitကနေ extendsလုပ်ရင်
+  Constructor လိုတယ် valueကို childကနေ To parents
+  ဘလိုလုပ်ကမလဲ?
+  ClassName()   : super(value(2));
+  so Bloc classထဲ dataကိုဘလိုပို့မလဲ?
+  ပို့ချင်တဲ့  fileထဲ  instance of Bloc classတည်ဆောက် ပီးတော့သူ့ propertiesကိုလှမ်းခေါ်ကမယ်
+  တာ  ပေ မဲ့ instanceမှာ  dynamic ဖြစ်နေရင် ပြင် ကမယ် retain လုပ်ကမယ်
+  ဘာကြောင့်လိုတာလဲ?
+    Importance of Type Safety in Flutter State Management
+    Enhancing Code Readability with Specific Types
+    Performance Benefits of Retaining Specific Types
+    Consistency and Data Integrity in State Management
+    Ease of Refactoring with Specific Types in Flutter
+    Preventing Errors with Type-Safe State Management
+
+
+    //Function Implementation
+
+        state = state +1; X အမှားဘာလို့လဲဆိုတော Stateက getter ဆိုလိုတာ က
+         getter properties only allows readable not convertion
+        emit(state +1);
+        emitက ထောက်ပုံပေးတယ်  valueပြောင်းတာကို infro
+
+///
+Defining _counterCubit inside the build method works because
+it ensures the state is always up-to-date. However,
+the best practice is to use BlocBuilder to automatically update
+the UI when the state changes, ensuring efficient and reactive state
+ management without manually fetching the state in the build method.
+
+ ///
+ အိုခေ Instancevarriableယူမယ်ဆိုရင် objact ကို sub instance လုပ်ကမယ်  good practice
+ data  fileမှာupdate လုပ်ချင်ရင် နှစ်မျိုးရှိတယ် ဒီတိုင်းး function  မှာ setState
+ but it not good enought why? U knew it
+ So how  we fix?
+ Using  BlocBuilder can fix this issues ,
+
+
+နေရာမျိုးစုံကနေ dataAccessed or Function သုံးချင်ရင်   Rootမှာ BlocProviderသုံး
+
+ NeedtoFix //final counterCubit  = BlocProvider.of<CounterCubit>(context);
+    After All U are able to get or change data
